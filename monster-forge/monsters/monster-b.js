@@ -12,7 +12,7 @@ window.MONSTERS.push({
     attack: 40,
     defense: 40,
     speed: 40, // attack / defense / speed สูงสุดอย่างละ 40
-    critical: 25, // สูงสุด 25
+    critical: 0, // สูงสุด 25
     lifesteal: 20, // สูงสุด 20
     evasion: 20, // สูงสุด 20
     armorPierce: 30 // สูงสุด 30
