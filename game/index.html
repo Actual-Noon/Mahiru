@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="จัดทีมมอนสเตอร์ในไฟล์ JavaScript แล้วฝึก Git และ GitHub ผ่านการต่อสู้">
+  <title>Monster Forge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Monster Forge<span class="brand-dot">.</span></h1>
+    <p class="muted">ทีม A ปะทะ ทีม B · จัดทีมได้ที่ <code>student-a/monsters.js</code> และ <code>student-b/monsters.js</code></p>
+  </header>
+  <main>
+    <section class="arena" aria-label="สนามประลอง">
+      <div id="team-errors" class="team-errors" role="alert" hidden></div>
+      <div class="teams">
+        <article id="team-0" class="team">
+          <div class="team-head">
+            <h2>ทีม A</h2>
+            <div class="slot-badge"><span class="slot-label">ตัวที่</span> <span class="slot-number">1</span><span class="slot-total"> / 3</span></div>
+          </div>
+          <div class="slots" aria-label="ลำดับมอนสเตอร์ทีม A"></div>
+          <div class="buffs"></div>
+          <div class="fighter">
+            <div class="skill-banner" aria-live="polite"></div>
+            <div class="floats" aria-hidden="true"></div>
+            <div class="portrait"><img alt="" width="112" height="112"></div>
+            <h3 class="fighter-name">???</h3>
+            <div class="hpbar" role="meter" aria-label="HP ทีม A"><div class="hp-lag"></div><div class="hp-gain"></div><div class="hp-fill"></div></div>
+            <p class="hp-value">HP —</p>
+            <p class="fighter-effects"></p>
+          </div>
+        </article>
+        <div class="versus" aria-hidden="true">VS</div>
+        <article id="team-1" class="team">
+          <div class="team-head">
+            <h2>ทีม B</h2>
+            <div class="slot-badge"><span class="slot-label">ตัวที่</span> <span class="slot-number">1</span><span class="slot-total"> / 3</span></div>
+          </div>
+          <div class="slots" aria-label="ลำดับมอนสเตอร์ทีม B"></div>
+          <div class="buffs"></div>
+          <div class="fighter">
+            <div class="skill-banner" aria-live="polite"></div>
+            <div class="floats" aria-hidden="true"></div>
+            <div class="portrait"><img alt="" width="112" height="112"></div>
+            <h3 class="fighter-name">???</h3>
+            <div class="hpbar" role="meter" aria-label="HP ทีม B"><div class="hp-lag"></div><div class="hp-gain"></div><div class="hp-fill"></div></div>
+            <p class="hp-value">HP —</p>
+            <p class="fighter-effects"></p>
+          </div>
+        </article>
+      </div>
+      <div class="battle-actions">
+        <button id="start" type="button" class="primary">เริ่มต่อสู้</button>
+        <button id="skip" type="button" hidden>ดูผลทันที ⏩</button>
+        <button id="continue" type="button" class="primary" hidden>สู้ต่อ ▶</button>
+        <button id="rematch" type="button" class="primary" hidden>ต่อสู้อีกรอบ 🔁</button>
+      </div>
+      <div id="result" class="result" role="status" aria-live="polite">กดเริ่มต่อสู้ แล้วดูว่าทีมไหนจะชนะ</div>
+      <div id="team-warnings" class="team-warnings" hidden></div>
+      <div class="log-heading"><h3>บันทึกการต่อสู้</h3><span id="turn-count" class="muted">เทิร์นที่ 0</span></div>
+      <ol id="battle-log" class="battle-log" aria-label="บันทึกการต่อสู้"><li class="empty-log">การโจมตีแต่ละเทิร์นจะแสดงที่นี่</li></ol>
+    </section>
+    <details class="rules">
+      <summary>กติกา: ธาตุ บัพทีม สกิล ติดตัว และสเตตัส</summary>
+      <div id="rules-body"></div>
+    </details>
+  </main>
+  <noscript>กรุณาเปิด JavaScript เพื่อใช้งาน Monster Forge</noscript>
+  <script src="js/data.js"></script>
+  <script src="../student-a/monsters.js"></script>
+  <script src="../student-b/monsters.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
